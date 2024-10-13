@@ -1,0 +1,218 @@
+#calendar {
+  background-color: white;
+  border-right: 3px solid black;
+  color: white;
+  font-family: sans-serif;
+  height: 100vh;
+  padding: 0 5%;
+  width: fit-content
+}
+
+#calendar h1 {
+  font-size: 10vh;
+  line-height: 10vh;
+  color: black;
+}
+
+#calendar h2 {
+  display: inline;
+  font-size: 20vh;
+  line-height: 20vh;
+  color: transparent;
+  text-shadow: 0px 0px 0px #0000;
+  /* font-weight: 600; */
+  background-color: red;
+  background: linear-gradient(205deg,
+      #0008 48%,
+      transparent 48%,
+      transparent 51%,
+      #f008 51%);
+  background-clip: text;
+}
+
+
+#day-container {
+  display: grid;
+  grid-template-columns: repeat(7, calc(calc(90vh - 70px) / 6));
+  grid-template-rows: 200px, repeat(6, calc(calc(90vh - 70px) / 6));
+  grid-gap: 10px;
+  margin-bottom: 50px;
+  padding: 10px 0;
+}
+
+#day-container .label {
+  background-color: black;
+
+  align-items: center;
+  display: flex;
+  font-size: calc(calc(calc(calc(90vh - 70px) / 6) - 30px) /2);
+  justify-content: center;
+}
+
+#day-container .SUN,
+#day-container .SAT {
+  background-color: red;
+}
+
+#day-container .SUN {
+  border-radius: 5px 0 0 5px;
+}
+
+#day-container .SAT {
+  border-radius: 0 5px 5px 0;
+}
+
+#day-container .day {
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  font-size: calc(calc(calc(90vh - 70px) / 6) - 30px);
+  justify-content: flex-end;
+  position: relative;
+}
+
+#day-container .day:hover {
+  background-color: #ccc;
+}
+
+#day-container .day p {
+  font-weight: 600;
+  line-height: 100%;
+}
+
+#day-container .day p.weekend {
+  color: #fff0;
+  text-shadow: 0px 0px 0px #0000;
+  background-color: red;
+  background-clip: text;
+
+}
+
+#day-container .day.today {
+  background: linear-gradient(205deg,
+      transparent 48%,
+      black 48%);
+}
+
+#day-container .day.today.weekend {
+  background: linear-gradient(205deg,
+      transparent 48%,
+      red 48%);
+}
+
+#day-container .day.today:hover {
+  background: linear-gradient(205deg,
+      #ccc 48%,
+      transparent 48%,
+      black 48%);
+}
+
+#day-container .day.today.weekend:hover {
+  background: linear-gradient(205deg,
+      #ccc 48%,
+      transparent 48%,
+      red 48%);
+}
+
+#day-container .day .today {
+  color: transparent;
+  text-shadow: 0px 0px 0px #0000;
+  /* font-weight: 600; */
+  background-color: red;
+  background: linear-gradient(205deg,
+      black 48%,
+      transparent 48%,
+      transparent 51%,
+      white 51%);
+  background-clip: text;
+}
+
+#day-container .day .today.weekend {
+  color: transparent;
+  text-shadow: 0px 0px 0px #0000;
+  background-color: red;
+  background: linear-gradient(205deg,
+      red 48%,
+      transparent 48%,
+      transparent 51%,
+      white 51%);
+  background-clip: text;
+}
+
+#day-container .day .today:hover {
+  color: transparent;
+  text-shadow: 0px 0px 0px #0000;
+  /* font-weight: 600; */
+  background-color: red;
+  background: linear-gradient(205deg,
+      black 48%,
+      transparent 48%,
+      transparent 51%,
+      #ccc 51%);
+  background-clip: text;
+}
+
+#day-container .day .today.weekend:hover {
+  color: transparent;
+  text-shadow: 0px 0px 0px #0000;
+  background-color: red;
+  background: linear-gradient(205deg,
+      red 48%,
+      transparent 48%,
+      transparent 51%,
+      #ccc 51%);
+  background-clip: text;
+}
+
+#day-container .day .prev,
+#day-container .day .next {
+  color: #000;
+}
+
+#day-container .day .cd-noti {
+  align-items: center;
+  background-color: #ffd900dd;
+  border-radius: 50%;
+  border: 3px solid white;
+  color: white;
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+  height: 35px;
+  justify-content: center;
+  position: absolute;
+  right: -15%;
+  top: 5px;
+  width: 35px;
+  z-index: 1;
+}
+
+#c-change-month {
+  align-items: center;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+#pmo,
+#nmo {
+  align-items: center;
+  background-color: #fff;
+  border: 3px solid black;
+  border-radius: 50%;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  font-size: 2em;
+  height: 50px;
+  justify-content: center;
+  transition: all linear 0.15s;
+  width: 50px;
+}
+#pmo:hover,
+#nmo:hover {
+  background-color: #000;
+  color: white;
+}

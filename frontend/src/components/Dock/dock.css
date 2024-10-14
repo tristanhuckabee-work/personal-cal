@@ -1,0 +1,48 @@
+#dock { width: 100% }
+
+
+#dock-nav {
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    #eeeeee99 0% ,#eeeeee99 10%,
+    #ffffffbb 10%,#ffffffbb 12%,
+    #eeeeee99 12%,#eeeeee99 60%,
+    #ffffffbb 60%,#ffffffbb 61%,
+    #eeeeee99 61%,#eeeeee99 63%,
+    #ffffffbb 63%,#ffffffbb 66%,
+    #eeeeee99 66%
+  );
+  border-top: 2px outset var(--primary);
+  border-right: 2px outset var(--primary);
+  border-top-right-radius: 100px;
+  color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px 10% 0 5%;
+  width: 85%;
+}
+#dock-nav span {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  width: 15%;
+}
+#dock-nav span .dni, #dock-nav h2 {
+  filter: drop-shadow(4px 1px #bdbdbdaa);
+}
+#dock-nav span .dni:hover {
+  cursor: pointer;
+  filter: drop-shadow(4px 1px #ff000055);
+}
+
+#dock-info {
+  background-color: var(--primary);
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-right: 10%;
+  padding : 10px 5%;
+  height: 93vh;
+}

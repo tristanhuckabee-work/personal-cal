@@ -64,7 +64,6 @@ function Calendar({ today }) {
   });
 
   const days = () => {
-    console.log(today);
     let first = new Date(`${MONTHS[month]} 1, ${year}`).getDay();
     let res = [];
 

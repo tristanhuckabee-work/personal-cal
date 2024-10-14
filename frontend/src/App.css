@@ -1,4 +1,9 @@
-:root {}
+:root {
+  --primary  : #ffffff;
+  --secondary: #000000;
+  --accent   : #ff0000;
+  font-family: sans-serif;
+}
 
 * {
   box-sizing: border-box;

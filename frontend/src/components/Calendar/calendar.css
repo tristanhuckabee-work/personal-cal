@@ -5,7 +5,10 @@
   font-family: sans-serif;
   height: 100vh;
   padding: 0 5%;
-  width: fit-content
+  width: fit-content;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 #calendar h1 {
@@ -17,7 +20,7 @@
 #calendar h2 {
   display: inline;
   font-size: 20vh;
-  line-height: 20vh;
+  line-height: 25vh;
   color: transparent;
   text-shadow: 0px 0px 0px #0000;
   /* font-weight: 600; */
@@ -28,6 +31,11 @@
       transparent 51%,
       #f008 51%);
   background-clip: text;
+
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  z-index: 0;
 }
 
 
@@ -211,6 +219,7 @@
   transition: all linear 0.15s;
   width: 50px;
 }
+
 #pmo:hover,
 #nmo:hover {
   background-color: #000;
